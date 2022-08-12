@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiControlsDemo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25"
+                             Padding="30,10"
+                             VerticalOptions="Center">
+            <Image
+                Source="dotnet_bot.png"
+                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Hello, World!"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Welcome to .NET Multi-platform App UI"
+                SemanticProperties.HeadingLevel="Level2"
+                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                FontSize="18"
+                HorizontalOptions="Center" />
+
+            <Button x:Name="CounterBtn"
+                    Text="Click me"
+                    SemanticProperties.Hint="Counts the number of times you click"
+                    Clicked="OnCounterClicked"
+                    HorizontalOptions="Center" />
+
+            <Label Text="ActivityIndicator" HorizontalTextAlignment="Center"/>
+            <ActivityIndicator IsRunning="True" />
+            
+            <Label Text="IndicatorView - A counter for a Carousel or something similar."/>
+            <IndicatorView Count="10" />
+            
+            <Border StrokeThickness="1" Stroke="Red">
+                <Label Text="Border"/>                
+            </Border>
+
+            <Label Text="BoxView" HorizontalTextAlignment="Center"/>
+            <BoxView Color="CornflowerBlue" 
+                     WidthRequest="20" 
+                     HeightRequest="20"/>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <CheckBox VerticalOptions="Center" />
+                <Label Text="CheckBox" VerticalOptions="Center"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="DatePicker"/>
+                <DatePicker />
+            </StackLayout>
+
+            <Label Text="Editor"/>
+            <Editor Placeholder="Enter Text Here"/>
+
+            <Label Text="Entry"/>
+            <Entry Placeholder="Enter Text"/>
+
+            <Label Text="Frame"/>
+            <Frame BackgroundColor="Red" 
+                   HasShadow="True" 
+                   WidthRequest="50" 
+                   HeightRequest="50" />
+
+            <Label Text="ProgressBar" />
+            <ProgressBar Progress="0.33" WidthRequest="500" />
+            
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <RadioButton VerticalOptions="Center" />
+                <Label Text="RadioButton" VerticalOptions="Center"/>
+            </StackLayout>
+
+            
+            <Label Text="RefreshView"/>
+            <RefreshView IsRefreshing="True" RefreshColor="Black">
+                <BoxView Color="DarkGray" 
+                     WidthRequest="200" 
+                     HeightRequest="300"/>
+                <!--<Image Source="dotnet_bot.png"
+                       HeightRequest="100" />-->
+            </RefreshView>
+            
+
+            <Label Text="SearchBar"/>
+            <SearchBar Placeholder="Search"/>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center"  >
+                <Label Text="Slider"/>
+                <Slider Value="0.25" WidthRequest="200" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="Switch"/>
+                <Switch OnColor="Green"  ThumbColor="Green" />
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Center">
+                <Label Text="TimePicker"/>
+                <TimePicker  />
+            </StackLayout>
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
